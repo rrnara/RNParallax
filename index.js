@@ -7,8 +7,7 @@ import {
   Text,
   View,
   Dimensions,
-  StatusBar,
-  Easing
+  StatusBar
 } from 'react-native';
 
 const {
@@ -179,7 +178,7 @@ class RNParallax extends Component {
     });
   }
 
-  getTitleOpacity(titleEasing = Easing.linear()) {
+  getTitleOpacity(titleEasing) {
     const { scrollY } = this.state;
     const { alwaysShowTitle } = this.props;
     return scrollY.interpolate({
@@ -377,7 +376,7 @@ RNParallax.propTypes = {
   navbarColor: PropTypes.string,
   title: PropTypes.any,
   titleStyle: PropTypes.any,
-  titleEasing: PropTypes.number,
+  titleEasing: PropTypes.func, // EasingFunction type
   headerTitleStyle: PropTypes.any,
   headerMaxHeight: PropTypes.number,
   headerMinHeight: PropTypes.number,
