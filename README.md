@@ -91,6 +91,7 @@ render() {
         navbarColor="#3498db"
         title="Parallax Header ~"
         titleStyle={styles.titleStyle}
+        titleEasing={Easing.poly(2)}
         backgroundImage={images.background}
         backgroundImageScale={1.2}
         renderNavBar={this.renderNavBar}
@@ -123,6 +124,7 @@ render() {
 | `statusBarColor` | `string` | No | This is the status bar color (for android) navBarColor will be used if no statusBarColor is passed in | Default to `null` |
 | `title` | `any` | No | This is the title to be display in the header, can be string or component | Default to `null` |
 | `titleStyle` | `style` | No | This is the title style to override default font size/color | Default to `color: ‘white’ `text and `fontSize: 16` |
+| `titleEasing` | `function` | No | This is the easing function for the title header view, a function that takes a number and returns one | Default to `undefined (Easing.linear by default)` |
 | `headerTitleStyle` | `style` | No | This is the header title animated view style to override default `<Animated.View>` style | Default to `null` |
 | `scrollEventThrottle` | `number` | No | This is the scroll event throttle | Default is `16` |
 | `contentContainerStyle` | `style` | No | This is the contentContainerStyle style to override default `<ScrollView>` contentContainerStyle style | Default to null |

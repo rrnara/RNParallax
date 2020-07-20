@@ -1,14 +1,14 @@
 {
   "name": "react-native-parallax-header",
-  "version": "1.1.3",
-  "description": "A react native scroll view component with Parallax header :p",
+  "version": "1.1.5",
+  "description": "A react native scroll view component with Parallax header",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kyaroru/RNParallax.git"
+    "url": "git+https://github.com/rrnara/RNParallax.git"
   },
   "keywords": [
     "parallax",
@@ -16,10 +16,10 @@
     "header",
     "scrollview"
   ],
-  "author": "Chiew Carol",
+  "author": "kyaroru,rrnara",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kyaroru/RNParallax/issues"
+    "url": "https://github.com/rrnara/RNParallax/issues"
   },
-  "homepage": "https://github.com/kyaroru/RNParallax#readme"
+  "homepage": "https://github.com/rrnara/RNParallax#readme"
 }
