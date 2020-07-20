@@ -7,7 +7,7 @@ import {
   Text,
   View,
   Dimensions,
-  StatusBar
+  StatusBar,
 } from 'react-native';
 
 const {
