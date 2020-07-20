@@ -178,12 +178,13 @@ class RNParallax extends Component {
     });
   }
 
-  getTitleOpacity() {
+  getTitleOpacity(titleEasing) {
     const { scrollY } = this.state;
     const { alwaysShowTitle } = this.props;
     return scrollY.interpolate({
       inputRange: this.getInputRange(),
       outputRange: [1, 1, alwaysShowTitle ? 1 : 0],
+      easing: titleEasing,
       extrapolate: 'clamp',
     });
   }
@@ -268,9 +269,9 @@ class RNParallax extends Component {
   }
 
   renderHeaderTitle() {
-    const { title, titleStyle, headerTitleStyle } = this.props;
+    const { title, titleStyle, headerTitleStyle, titleEasing } = this.props;
     const titleTranslateY = this.getTitleTranslateY();
-    const titleOpacity = this.getTitleOpacity();
+    const titleOpacity = this.getTitleOpacity(titleEasing);
 
     return (
       <Animated.View
@@ -375,6 +376,7 @@ RNParallax.propTypes = {
   navbarColor: PropTypes.string,
   title: PropTypes.any,
   titleStyle: PropTypes.any,
+  titleEasing: PropTypes.func, // EasingFunction type
   headerTitleStyle: PropTypes.any,
   headerMaxHeight: PropTypes.number,
   headerMinHeight: PropTypes.number,
